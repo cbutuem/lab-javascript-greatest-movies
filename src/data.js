@@ -2005,3 +2005,32 @@ const movies = [
 if (typeof module !== 'undefined') {
   module.exports = movies;
 }
+//
+const getAllDirectors = Object.keys(movies).map(key => movies[key]['director']);
+// { 
+
+const getAllDirectors = movies.map(function (direct)
+ { 
+  let direc = [];
+  let i = 0;
+ for(let i = 0; i < movies.length; i++)
+ {
+   direc.push(movies[i].director);
+  }
+	 return direc;
+});
+
+function getAllDirectors(){ movies.map(function (direct)
+ { 
+  let direc = [];
+  let i = 0;
+ for(let i = 0; i < movies.length; i++)
+ {
+   direc.push(movies[i].director);
+  }
+   return direc;
+});
+
+//--------------------------------------------------------
+
+const steve = movies.filter(howManyMovies => howManyMovies.director == 'Steven Spielberg')
